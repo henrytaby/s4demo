@@ -52,16 +52,16 @@
                             <label class="form-control-label">Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your name" name="txtname" required 
+                                       placeholder="Enter the student's name" name="txtname" required 
                                         {$privFace.input} value="${item.name}">
                             </div>
                         </div>
                             
-                        <div class="col-lg-4 m-form__group-sub">
+                        <div class="col-lg-6 m-form__group-sub">
                             <label class="form-control-label">Last Name:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your last name" name="txtlast_name" required 
+                                       placeholder="Enter the student's last name" name="txtlast_name" required 
                                         {$privFace.input} value="${item.last_name}">
                             </div>
                         </div>
@@ -69,36 +69,36 @@
                             <label class="form-control-label">Address:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your address" name="txtaddress" required 
+                                       placeholder="Enter the student's address" name="txtaddress" required 
                                         {$privFace.input} value="${item.address}">
                             </div>
                         </div>  
                             
                             
-                        <div class="col-lg-4 m-form__group-sub">
+                        <div class="col-lg-6 m-form__group-sub">
                             <label class="form-control-label">Email:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your email" name="txtemail" required 
+                                       placeholder="Enter the student's email" name="txtemail" required 
                                         {$privFace.input} value="${item.email}">
                             </div>
                         </div>
                         
-                        <div class="col-lg-4 m-form__group-sub">
+                        <div class="col-lg-6 m-form__group-sub">
                             <label class="form-control-label">Phone Number:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your email" name="txtphone_number" required 
+                                       placeholder="Enter the student's phone number" name="txtphone_number" required 
                                         {$privFace.input} value="${item.phone_number}">
                             </div>
                         </div> 
                             
                             
-                        <div class="col-lg-4 m-form__group-sub">
+                        <div class="col-lg-12 m-form__group-sub">
                             <label class="form-control-label">Description:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter Description" name="txtdescription" required
+                                       placeholder="Short description" name="txtdescription" required
                                         {$privFace.input} value="${item.description}">
                             </div>
                         </div>

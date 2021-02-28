@@ -108,7 +108,7 @@
                                     <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
                                         <a href="javascript:;" class="m-menu__link m-menu__toggle">
                                             <i class="m-menu__link-icon flaticon-layers"></i>
-                                            <span class="m-menu__link-text">Mas Sobre Henry Taby</span>
+                                            <span class="m-menu__link-text">Developed by Henry Taby</span>
                                             <i class="m-menu__hor-arrow la la-angle-down"></i>
                                             <i class="m-menu__ver-arrow la la-angle-right"></i>
                                         </a>
@@ -118,7 +118,7 @@
                                                 <li class="m-menu__item "  aria-haspopup="true">
                                                     <a  href="http://henrytaby.com" target="_blank" class="m-menu__link ">
                                                         <i class="m-menu__link-icon fab fa-hotjar"></i>
-                                                        <span class="m-menu__link-text">Página Web</span>
+                                                        <span class="m-menu__link-text">Website</span>
                                                     </a>
                                                 </li>
                                                 <li class="m-menu__item "  aria-haspopup="true">
@@ -225,7 +225,7 @@
                             </li>
 
                             <li class="m-menu__section" style="border-bottom: 2px solid #387ec9; margin: 0px;">
-                                <h4 class="m-menu__section-text" style="color:whitesmoke;" >Test Técnico</h4>
+                                <h4 class="m-menu__section-text" style="color:whitesmoke;" >WebApp</h4>
                                 <i class="m-menu__section-icon flaticon-more-v2"></i>
                             </li>
 
@@ -243,13 +243,13 @@
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a class="m-menu__link " href="classes?action=itemUpdate&id=&type=new">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
-                                                <span class="m-menu__link-text">New Classe </span>
+                                                <span class="m-menu__link-text">New Class </span>
                                             </a>
                                         </li>
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a class="m-menu__link " href="classes" >
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
-                                                <span class="m-menu__link-text">List Classes </span>
+                                                <span class="m-menu__link-text">Available Classes </span>
                                             </a>
                                         </li>
                                     </ul>
@@ -276,7 +276,7 @@
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a class="m-menu__link " href="students" >
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
-                                                <span class="m-menu__link-text">List students </span>
+                                                <span class="m-menu__link-text">Students list </span>
                                             </a>
                                         </li>
                                     </ul>

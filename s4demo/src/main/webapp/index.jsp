@@ -135,7 +135,7 @@
                                             <li class="m-nav__item">
                                                 <a class="m-nav__link" href="classes">
                                                     <i class="m-nav__link-icon flaticon-list-2"></i>
-                                                    <span class="m-nav__link-text">List Class</span>
+                                                    <span class="m-nav__link-text">Available Classes</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -174,7 +174,7 @@
                                             <li class="m-nav__item">
                                                 <a class="m-nav__link" href="students">
                                                     <i class="m-nav__link-icon flaticon-list-2"></i>
-                                                    <span class="m-nav__link-text">List Students</span>
+                                                    <span class="m-nav__link-text">Students list</span>
                                                 </a>
                                             </li>
                                         </ul>

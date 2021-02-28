@@ -27,7 +27,7 @@
             <strong>Student:</strong> ${item.students.name} ${item.students.last_name}
             <br>
             </c:if>
-                    Students:  ${item.id} ${item.class_id}  </label>
+                    Select from current students:  ${item.id} ${item.class_id}  </label>
                 <div class="input-group">
                     <select class="form-control m-select2 select2_general " style="width: 100%"
                         name="student_id" id="student_id" required >
@@ -74,9 +74,9 @@
                 $("#form_modal").modal("hide");
                 table_list.ajax.reload();
                 if(responseText.accion =='update') {
-                    swal({type: 'success',title: 'Good work! everythin was saved successfully!',showConfirmButton: false,timer: 1000});
+                    swal({type: 'success',title: 'Good job! Your changes were saved!',showConfirmButton: false,timer: 1000});
                 }else{
-                    swal({type: 'success',title: 'Good work! the record has been created successfully!',showConfirmButton: false,timer: 1000});
+                    swal({type: 'success',title: 'Good job! the record has been created successfully!',showConfirmButton: false,timer: 1000});
                 }
             }else{
                 swal({position: 'top-center'
@@ -127,7 +127,7 @@
             });
 
             $('.select2_general').select2({
-                placeholder: "Seleccione una opción"
+                placeholder: "Select one"
                 //dropdownParent: $("#form_modal"),
                 //width: '80%',
             });

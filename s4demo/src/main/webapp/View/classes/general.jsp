@@ -46,13 +46,13 @@
                 <div class="col-lg-12 m-form__group-sub " >
                     <div class="row cuadro m--padding-bottom-5 ">
                         <div class="col-lg-12 titulo m--margin-bottom-5 m--padding-left-5 m--padding-top-5">
-                            Personal Information
+                            Class Information
                         </div>
                         <div class="col-lg-12 m-form__group-sub">
                             <label class="form-control-label">Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter your name" name="txtname" required 
+                                       placeholder="Enter the class name" name="txtname" required 
                                         {$privFace.input} value="${item.name}">
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                             <label class="form-control-label">Description:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter description" name="txtdescription" required
+                                       placeholder="Short description" name="txtdescription" required
                                         {$privFace.input} value="${item.description}">
                             </div>
                         </div>

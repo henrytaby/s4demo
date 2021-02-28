@@ -13,7 +13,7 @@
 <div class="m-portlet m-portlet--mobile">
     <div class="m-portlet__head">
         <div class="m-portlet__head-tools">
-            List of registered students
+            List of Registered Students
         </div>
 
         <div class="m-portlet__head-tools">
@@ -132,7 +132,7 @@
 			         <'row'<'col-sm-12'tr>>
                      <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
                 buttons: [
-                    {extend:'colvis',text:'Ver'
+                    {extend:'colvis',text:'Fields'
                         ,columnText: function ( dt, idx, title ) {
                             return (idx+1)+': '+title;
                         }

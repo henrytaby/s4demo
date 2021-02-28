@@ -12,9 +12,14 @@ import java.sql.DriverManager;
  * @author henry.taby
  */
 public class Conexion {
+    /*
     private static String db="s4demo";
     private static String user="root";
     private static String password="";
+    */
+    private static String db="aletaby_s4demo";
+    private static String user="aletaby";
+    private static String password="damitaai2020";
     private static String ruta="jdbc:mysql://localhost:3306/"+db+"?useSSL=false";
     
     private Connection cnx = null;

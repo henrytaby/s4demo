@@ -16,7 +16,7 @@
 <div class="m-portlet__head">
     <div class="m-portlet__head-caption">
         <div class="m-portlet__head-title">
-            <h3 class="m-portlet__head-text">List of registered Classes</h3>
+            <h3 class="m-portlet__head-text">List of Available Classes</h3>
         </div>
     </div>
     
@@ -167,7 +167,7 @@
 			         <'row'<'col-sm-12'tr>>
                      <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
                 buttons: [
-                    {extend:'colvis',text:'Ver'
+                    {extend:'colvis',text:'Fields'
                         ,columnText: function ( dt, idx, title ) {
                             return (idx+1)+': '+title;
                         }

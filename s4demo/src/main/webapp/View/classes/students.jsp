@@ -16,7 +16,7 @@
 <div class="m-portlet__head">
     <div class="m-portlet__head-caption">
         <div class="m-portlet__head-title">
-            <h3 class="m-portlet__head-text">List of registered Students</h3>
+            <h3 class="m-portlet__head-text">List of Registered Students</h3>
         </div>
     </div>
     
@@ -24,7 +24,7 @@
         <ul class="m-portlet__nav">
             <li class="m-portlet__nav-item">
                 <a href="#" class="btn btn-focus m-btn m-btn--custom m-btn--bolder m-btn--icon" id="btn_form" rel="new">
-                    <span><i class="fa fa-plus"></i><span>New Students</span></span>
+                    <span><i class="fa fa-plus"></i><span>New Student</span></span>
                 </a>
             </li>
             <li class="m-portlet__nav-item"></li>
@@ -167,7 +167,7 @@
 			         <'row'<'col-sm-12'tr>>
                      <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
                 buttons: [
-                    {extend:'colvis',text:'Ver'
+                    {extend:'colvis',text:'Fields'
                         ,columnText: function ( dt, idx, title ) {
                             return (idx+1)+': '+title;
                         }
