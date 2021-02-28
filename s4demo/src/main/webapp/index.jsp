@@ -203,7 +203,7 @@
                         
                     </div>
                     
-
+<!--
                     <div class="m-widget1 m--padding-5">
                         <div class="m-widget1__item resumen_global" >
                             <div class="row m-row--no-padding align-items-center">
@@ -231,6 +231,7 @@
 
                         
                     </div>
+-->
                 </div>
 
             </div>
