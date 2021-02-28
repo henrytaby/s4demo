@@ -15,7 +15,9 @@
     <div class="modal-body">
 
         <div class="alert alert-focus" role="alert">
-            <c:if test="${type == 'new'}">New</c:if><c:if test="${type == 'update'}">Edit</c:if> Class 
+            <c:if test="${type == 'new'}">New</c:if><c:if test="${type == 'update'}">Edit</c:if> 
+            
+            Class
             
         </div>
 
@@ -27,7 +29,7 @@
             <strong>Student:</strong> ${item.students.name} ${item.students.last_name}
             <br>
             </c:if>
-                    Class:  ${item.id} ${item.class_id}  </label>
+                    Select from current Classes:  ${item.id} ${item.class_id}  </label>
                 <div class="input-group">
                     <select class="form-control m-select2 select2_general " style="width: 100%"
                         name="class_id" id="class_id" required >
@@ -127,7 +129,7 @@
             });
 
             $('.select2_general').select2({
-                placeholder: "Seleccione una opción"
+                placeholder: "Select one"
                 //dropdownParent: $("#form_modal"),
                 //width: '80%',
             });
