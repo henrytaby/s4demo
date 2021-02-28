@@ -133,7 +133,7 @@
                                                 </a>
                                             </li>
                                             <li class="m-nav__item">
-                                                <a class="m-nav__link" href="/miempresa/venta">
+                                                <a class="m-nav__link" href="classes">
                                                     <i class="m-nav__link-icon flaticon-list-2"></i>
                                                     <span class="m-nav__link-text">List Class</span>
                                                 </a>
@@ -166,13 +166,13 @@
                                         </div>
                                         <ul class="m-nav">
                                             <li class="m-nav__item">
-                                                <a class="m-nav__link" href="/miempresa/venta/nuevo">
+                                                <a class="m-nav__link" href="students?action=itemUpdate&id=&type=new">
                                                     <i class="m-nav__link-icon flaticon-plus"></i>
                                                     <span class="m-nav__link-text">New Student</span>
                                                 </a>
                                             </li>
                                             <li class="m-nav__item">
-                                                <a class="m-nav__link" href="/miempresa/venta">
+                                                <a class="m-nav__link" href="students">
                                                     <i class="m-nav__link-icon flaticon-list-2"></i>
                                                     <span class="m-nav__link-text">List Students</span>
                                                 </a>

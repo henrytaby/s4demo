@@ -241,13 +241,13 @@
                                     <span class="m-menu__arrow"></span>
                                     <ul class="m-menu__subnav">
                                         <li class="m-menu__item " aria-haspopup="true" >
-                                            <a class="m-menu__link " href="/miempresa/venta/nuevo">
+                                            <a class="m-menu__link " href="classes?action=itemUpdate&id=&type=new">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
                                                 <span class="m-menu__link-text">New Classe </span>
                                             </a>
                                         </li>
                                         <li class="m-menu__item " aria-haspopup="true" >
-                                            <a class="m-menu__link " href="control?action=classes" >
+                                            <a class="m-menu__link " href="classes" >
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
                                                 <span class="m-menu__link-text">List Classes </span>
                                             </a>
@@ -268,7 +268,7 @@
                                     <span class="m-menu__arrow"></span>
                                     <ul class="m-menu__subnav">
                                         <li class="m-menu__item " aria-haspopup="true" >
-                                            <a class="m-menu__link " href="students?action=new">
+                                            <a class="m-menu__link " href="students?action=itemUpdate&id=&type=new">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
                                                 <span class="m-menu__link-text">New student </span>
                                             </a>

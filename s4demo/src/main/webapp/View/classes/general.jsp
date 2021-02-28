@@ -39,7 +39,7 @@
 <!--begin::Portlet-->
 <div class="m-portlet">
     <!--begin::Form-->
-    <form class="m-form m-form--fit m-form--label-align-right" method="POST" action="students?action=itemupdatesql"  id="general_form">
+    <form class="m-form m-form--fit m-form--label-align-right" method="POST" action="classes?action=itemupdatesql"  id="general_form">
 
         <div class="m-portlet__body">
             <div class="form-group m-form__group row  m-form m--padding-bottom-5 m--padding-top-5" >
@@ -48,7 +48,7 @@
                         <div class="col-lg-12 titulo m--margin-bottom-5 m--padding-left-5 m--padding-top-5">
                             Personal Information
                         </div>
-                        <div class="col-lg-6 m-form__group-sub">
+                        <div class="col-lg-12 m-form__group-sub">
                             <label class="form-control-label">Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
@@ -56,49 +56,13 @@
                                         {$privFace.input} value="${item.name}">
                             </div>
                         </div>
+                              
                             
-                        <div class="col-lg-4 m-form__group-sub">
-                            <label class="form-control-label">Last Name:</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control m-input"
-                                       placeholder="Enter your last name" name="txtlast_name" required 
-                                        {$privFace.input} value="${item.last_name}">
-                            </div>
-                        </div>
                         <div class="col-lg-12 m-form__group-sub">
-                            <label class="form-control-label">Address:</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control m-input"
-                                       placeholder="Enter your address" name="txtaddress" required 
-                                        {$privFace.input} value="${item.address}">
-                            </div>
-                        </div>  
-                            
-                            
-                        <div class="col-lg-4 m-form__group-sub">
-                            <label class="form-control-label">Email:</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control m-input"
-                                       placeholder="Enter your email" name="txtemail" required 
-                                        {$privFace.input} value="${item.email}">
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 m-form__group-sub">
-                            <label class="form-control-label">Phone Number:</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control m-input"
-                                       placeholder="Enter your email" name="txtphone_number" required 
-                                        {$privFace.input} value="${item.phone_number}">
-                            </div>
-                        </div> 
-                            
-                            
-                        <div class="col-lg-4 m-form__group-sub">
                             <label class="form-control-label">Description:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control m-input"
-                                       placeholder="Enter Description" name="txtdescription" required
+                                       placeholder="Enter description" name="txtdescription" required
                                         {$privFace.input} value="${item.description}">
                             </div>
                         </div>
@@ -142,7 +106,7 @@
                 if(responseText.accion =='update') {
                     swal({type: 'success',title: ' Everything was saved successfull!',showConfirmButton: false,timer: 1000});
                 }else{
-                    location = "students?action=itemUpdate&id="+responseText.id+"&type=update";
+                    location = "classes?action=itemUpdate&id="+responseText.id+"&type=update";
                 }
             }else{
                 swal("An error occurred", responseText.msg, "danger")
@@ -154,7 +118,7 @@
             , dataType: 'json'
             , success:  showResponse
             , data: {
-                accion:'students?action=itemupdatesql'
+                accion:'classes?action=itemupdatesql'
                 ,itemId:idficha
                 ,type:type
             }

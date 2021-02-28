@@ -13,7 +13,7 @@
 <div class="m-portlet m-portlet--mobile">
     <div class="m-portlet__head">
         <div class="m-portlet__head-tools">
-            List of registered students
+            List of registered classes
         </div>
 
         <div class="m-portlet__head-tools">
@@ -21,7 +21,7 @@
                 <li class="m-portlet__nav-item">
                     
                     <a href="#" class="btn btn-primary m-btn m-btn--custom m-btn--bolder m-btn--icon" id="btn_update" rel="new">
-                        <span><i class="fa fa-plus"></i><span>New Student</span></span>
+                        <span><i class="fa fa-plus"></i><span>New Class</span></span>
                     </a>
                     
                 </li>
@@ -36,11 +36,7 @@
                 <tr>
                     <th>Action</th>
                     <th>Name</th>
-                    <th>Last name</th>
-                    <th>Phone Number</th>
                     <th>Description</th>
-                    <th>Address</th>
-                    <th>Email</th>
                 </tr>
             </thead>
         </table>
@@ -53,7 +49,7 @@
     var table_list;
     
     var snippet_list = function () {
-        var urlsys = "students?action=";
+        var urlsys = "classes?action=";
         
         /**
          * Delete
@@ -110,7 +106,7 @@
             return $(this.header()).text().trim();
         });
 
-        var exporta_titulo = "List of registered Students";
+        var exporta_titulo = "List of registered Classes";
         var exporta_columnas = [':visible :not(.noExport)' ];
 
         var initTable1 = function() {
@@ -122,7 +118,7 @@
                 responsive: true,
                 keys: {
                     columns: exporta_columnas,
-                    clipboard: false,
+                    clipboard: false
                 },
                 colReorder: true,
                 //== Pagination settings
@@ -161,16 +157,12 @@
                 ajax: {
                     url: urlsys+'listJson',
                     method: 'POST',
-                    dataSrc: "data",
+                    dataSrc: "data"
                 },
                 columns: [
                     {data: 'id'} ,
                     {data: 'name'} ,
-                    {data: 'last_name'} ,
-                    {data: 'phone_number'} ,
-                    {data: 'description'} ,
-                    {data: 'address'} ,
-                    {data: 'email'} 
+                    {data: 'description'} 
                 ],
                 columnDefs: [
                     {
@@ -214,9 +206,4 @@
         snippet_list.init();
     });
 
-
-
-
 </script>
-
-

@@ -18,7 +18,7 @@
                     <i class="la la-thumb-tack m--font-success"></i>
                 </span>
                 <h3 class="m-portlet__head-text">
-                    Student / <c:if test = "${type=='new'}" >New</c:if> 
+                    Class / <c:if test = "${type=='new'}" >New</c:if> 
                     <c:if test = "${type=='update'}" >Update</c:if> 
                     &nbsp; <!--<strong><span class="m--font-success">{$item.nombre}</span></strong>-->
                 </h3>
@@ -27,7 +27,7 @@
         <div class="m-portlet__head-tools">
             <ul class="m-portlet__nav">
                 <li class="m-portlet__nav-item">
-                    <a href="students" class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill" title="Atras">
+                    <a href="students" class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill" title="Back">
                         <i class="la la-mail-reply"></i>
                     </a>
                 </li>
@@ -57,11 +57,11 @@
                 <li class="nav-item m-tabs__item">
                     <a class="nav-link m-tabs__link "
                        data-toggle="tabajax"
-                       data-target="#classes_pane"
-                       id = "classes_tab"
-                       href="${ruta}?action=tabClasses&type=${type}&id=${id}"
+                       data-target="#students_pane"
+                       id = "students_tab"
+                       href="${ruta}?action=tabStudents&type=${type}&id=${id}"
                        role="tab">
-                        <i class="flaticon-folder-2 m--font-success"></i> Classes
+                        <i class="flaticon-folder-2 m--font-success"></i> Students
                     </a>
                 </li>
                 </c:if>
@@ -72,7 +72,7 @@
     <div class="tab-content">
         <div class="tab-pane active" id="general_pane"></div>
         <c:if test = "${type=='update'}" >
-        <div class="tab-pane" id="classes_pane"></div>
+        <div class="tab-pane" id="students_pane"></div>
         </c:if>
     </div>
     
@@ -84,7 +84,7 @@
     var snippet_tab_item = function () {
         var borra_contenido_tabs = function () {
             $("#general_pane").html("");
-            $("#classes_pane").html("");            
+            $("#students_pane").html("");            
         };
         var handler_tab_build = function(){
             $('[data-toggle="tabajax"]').click(function(e) {
