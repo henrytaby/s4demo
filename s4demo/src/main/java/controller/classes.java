@@ -6,7 +6,9 @@
 package controller;
 
 import DAO.classesDAO;
+import DAO.studentsDAO;
 import Entity.Classes;
+import Entity.studentclass;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -43,7 +45,37 @@ public class classes extends HttpServlet {
         }
         
         switch(action){
-
+            
+                case "itemstudentupdatesql":
+                    response.setContentType("application/json");
+                    response.setCharacterEncoding("UTF-8");
+                    this.itemstudentupdatesql(request, response,ruta);
+                break;
+                
+                case "itemUpdateStudent":
+                    response.setContentType("text/html;charset=UTF-8");
+                    ruta = "View/classes/studentsform.jsp";
+                    this.itemStudent(request, response,ruta);
+                break;
+                
+                case "deletestudent":
+                    response.setContentType("application/json");
+                    response.setCharacterEncoding("UTF-8");
+                    this.deleteStudentJson(request, response,ruta);
+                break;
+                
+                case "listStudentsJson":
+                    response.setContentType("application/json");
+                    response.setCharacterEncoding("UTF-8");
+                    this.listStudentsJson(request, response,ruta);
+                break;
+                
+                case "tabStudents":
+                    response.setContentType("text/html;charset=UTF-8");
+                    ruta = "View/classes/students.jsp";
+                    this.students(request, response,ruta);
+                break;
+                
                 case "itemupdatesql":
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
@@ -79,7 +111,134 @@ public class classes extends HttpServlet {
         }
     }
     
+    protected void itemstudentupdatesql(HttpServletRequest request, HttpServletResponse response, String ruta)
+            throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        String respuesta = "1";
+System.out.println("---------------------");
+        String msg = "";
+
+        studentclass st = new studentclass();
+        String id = request.getParameter("id");
+        String item_id = request.getParameter("item_id");
+        
+        System.out.println("---------------------");
+        
+        st.setStudent_id(Integer.parseInt(request.getParameter("student_id")));
+        st.setClass_id(Integer.parseInt(item_id));
+       
+        String itemId = id;
+        try {
+            String msj = "";
+            if (id == null || id.isEmpty()) {
+                Integer idr;
+                idr= classesDAO.insertStudent(st);
+                id = String.valueOf(idr);
+            } else {
+                 //System.out.println("Actualizar datos");
+                /*
+                 st.setId(Integer.parseInt(id));
+                msg = studentsDAO.update(st);
+                */
+            }
+          
+        } catch (Exception e) {
+            System.out.println("Error: "+ e);
+            respuesta = "2";
+            msg = "error :"+ e.getMessage();
+        }
+           String res = "{\"res\":\""+respuesta+"\",\"msg\":\""+msg+"\",\"id\":\""+id+"\"}";
+           out.print(res);
+           out.flush();
+
+    }
     
+    protected void itemStudent(HttpServletRequest request, HttpServletResponse response, String ruta)
+            throws ServletException, IOException {
+
+        try {
+            String id = request.getParameter("id");
+            String item_id = request.getParameter("item_id");
+            String type = request.getParameter("type");
+            request.setAttribute("id", id);
+            request.setAttribute("item_id", item_id);
+            request.setAttribute("type", type);
+            request.setAttribute("ruta", "classes");
+            
+            request.setAttribute("classesopt", classesDAO.getStudentsListOpt(Integer.parseInt(item_id)));
+            request.setAttribute("item", classesDAO.getStudentsClass(Integer.parseInt(id)));
+            
+        } catch (Exception e) {
+            System.out.println("Error: "+ e);
+        }
+        dis = request.getRequestDispatcher(ruta);
+        dis.forward(request, response);
+    }
+    
+    
+    protected void deleteStudentJson(HttpServletRequest request, HttpServletResponse response, String ruta)
+            throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        
+        String respuesta = "1";
+        String msg = "";
+        try {
+           String id = request.getParameter("id");
+           if( id !="" && id!= null){
+               String msgDelete = classesDAO.deleteStudent(Integer.parseInt(id));
+               if (msgDelete!="1"){
+                   respuesta = "2";
+                   msg = msgDelete;
+               }
+           }else{
+               respuesta = "2";
+               msg = "error id is null or empty";
+           }
+           
+        } catch (Exception e) {
+            System.out.println("Error: "+ e);
+            respuesta = "2";
+            msg = "error :"+ e.getMessage();
+        }
+           String res = "{\"res\":\""+respuesta+"\",\"msg\":\""+msg+"\"}";
+           out.print(res);
+           out.flush();
+           
+    }
+    
+    
+    protected void listStudentsJson(HttpServletRequest request, HttpServletResponse response, String ruta)
+            throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        try {
+           String id = request.getParameter("id");
+                             
+           String json = new Gson().toJson(classesDAO.getStudentsList(Integer.parseInt(id)));
+           String res = "{\"data\":"+json+"}";
+           out.print(res);
+           out.flush();
+        } catch (Exception e) {
+            System.out.println("Error: "+ e);
+        }
+    }
+    
+    
+    protected void students(HttpServletRequest request, HttpServletResponse response, String ruta)
+            throws ServletException, IOException {
+
+        try {
+            String id = request.getParameter("id");
+            String type = request.getParameter("type");
+            request.setAttribute("id", id);
+            request.setAttribute("type", type);
+            request.setAttribute("ruta", "classes");
+        } catch (Exception e) {
+            System.out.println("Error: "+ e);
+        }
+
+        dis = request.getRequestDispatcher(ruta);
+        dis.forward(request, response);
+    }
 
     protected void itemUpdateSQL(HttpServletRequest request, HttpServletResponse response, String ruta)
             throws ServletException, IOException {

@@ -16,7 +16,7 @@
 <div class="m-portlet__head">
     <div class="m-portlet__head-caption">
         <div class="m-portlet__head-title">
-            <h3 class="m-portlet__head-text">List of registered Classes</h3>
+            <h3 class="m-portlet__head-text">List of registered Students</h3>
         </div>
     </div>
     
@@ -24,7 +24,7 @@
         <ul class="m-portlet__nav">
             <li class="m-portlet__nav-item">
                 <a href="#" class="btn btn-focus m-btn m-btn--custom m-btn--bolder m-btn--icon" id="btn_form" rel="new">
-                    <span><i class="fa fa-plus"></i><span>New Class</span></span>
+                    <span><i class="fa fa-plus"></i><span>New Students</span></span>
                 </a>
             </li>
             <li class="m-portlet__nav-item"></li>
@@ -38,7 +38,7 @@
         <thead>
             <tr>
                 <th >Action</th>
-                <th >Class</th>
+                <th >Students</th>
             </tr>
         </thead>
         <tfoot>
@@ -66,7 +66,7 @@
 
 
     var snippet_list = function () {
-        var urlsys = "students?action=";
+        var urlsys = "classes?action=";
         /**
          * Delete
          */
@@ -86,7 +86,7 @@
         };
         
         var item_delete_action = function(id){
-            $.get( urlsys+"deleteclass",
+            $.get( urlsys+"deletestudent",
                 { id:id},
                 function(res){
                     if(res.res == 1){
@@ -115,7 +115,7 @@
          * Actualizar o nuevo
          */
         var item_form = function(id,type){
-            var load_url = urlsys+"itemUpdateClass&id="+id+'&type='+type+"&item_id=${id}";
+            var load_url = urlsys+"itemUpdateStudent&id="+id+'&type='+type+"&item_id=${id}";
             
             swal({
                 title: 'Loading form',
@@ -194,14 +194,14 @@
                 pageLength: 10,
                 order: [[ 1, "asc" ]],
                 ajax: {
-                    url: urlsys+'listClassesJson',
+                    url: urlsys+'listStudentsJson',
                     method: 'POST',
                     dataSrc: "data",
                     data: { id:'${id}'}
                 },
                 columns: [
                         {data: 'id'} ,
-                        {data: 'class_name'} 
+                        {data: 'student_name'} 
                 ],
                 columnDefs: [
                     {
